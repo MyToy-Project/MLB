@@ -96,8 +96,8 @@
 
 </details>
       
-  1. DB 개설
-  2. 점검
-  3. 프로젝트 시작
+1. DB 개설
+2. 점검
+3. 프로젝트 시작
 - 아래 저장소를 참고
   - [https://github.com/E-TF/Momo/issues](https://github.com/E-TF/Momo/issues)
