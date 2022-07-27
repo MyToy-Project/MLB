@@ -9,7 +9,10 @@ Week: Far Away
 
 - 진행 순서
     - 사용 기술 분석 `2022/07/21 ~ 2022/07/22`
-        
+<details>
+<summary></summary>
+
+</details>
         [[토이] 나의 작은 블로그 프로젝트 계획](https://www.notion.so/2bf997970a89499eb8f98a26c9e4fb55) `07/21`
         
         [[토이] 프로젝트 개요 정리하기](https://www.notion.so/2cf661a9ff3e4e16ae21132f90a2ba91) `07/22`
