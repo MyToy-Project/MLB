@@ -3,7 +3,7 @@
 
 진행 순서
     
-<details><summary>사용 기술 분석 `2022/07/21 ~ 2022/07/22` </summary>
+<details><summary>사용 기술 분석 [2022/07/21 ~ 2022/07/22] </summary>
 
  * [[토이] 나의 작은 블로그 프로젝트 계획](https://www.notion.so/2bf997970a89499eb8f98a26c9e4fb55) `07/21`
 
@@ -30,13 +30,13 @@
       - Gradle
 </details>
 
-<details><summary>요구 사항 분석 및 트랜잭션 분석`2022/07/24`</summary>
+<details><summary>요구 사항 분석 및 트랜잭션 분석 [2022/07/24]</summary>
 
 * [[MLB] 요구 사항 분석, 트랜잭션 분석](https://www.notion.so/MLB-1daf2a960b074ce494d53a1ba5324410)
 
 </details>
   
-<details><summary>개념적 설계(개념적 모델링(ERD), 트랜잭션 모델링(유형별 트랜잭션 설계)) `2022/07/26`</summary>
+<details><summary>개념적 설계(개념적 모델링(ERD), 트랜잭션 모델링(유형별 트랜잭션 설계)) [2022/07/26]</summary>
 
 * [[MLB] 개념적 설계(ERD)](https://www.notion.so/MLB-ERD-764e69d67974466eab87a48fb2a769ca) 
   
@@ -44,14 +44,14 @@
 
 </details>
   
-<details><summary>논리적 설계(릴레이션 스키마 변경), 물리적 설계(내부 스키마) `2022/07/27`</summary>
+<details><summary>논리적 설계(릴레이션 스키마 변경), 물리적 설계(내부 스키마) [2022/07/27]</summary>
 
 * [[MLB] 논리적 설계(릴레이션 스키마, 무결성 제약조건 정의), 물리적 설계(내부 스키마)](https://www.notion.so/MLB-914e6d0f29cb4b15a4d6fd9510892acd)
 
 </details>
 
 
-<details><summary>화면 정의 `2022/07/23`</summary>
+<details><summary>화면 정의 [2022/07/23]</summary>
 
 * [[토이] 프로젝트 화면 설계](https://www.notion.so/7053e25d04fa49cfb398fe22a4e1f2e9) `07/23`
 
