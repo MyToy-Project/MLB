@@ -1,5 +1,5 @@
 # MLB
-### My Little Blog[나의 작은 블로그(나작블)]
+### My Little Blog
 
 진행 순서
     
