@@ -95,8 +95,58 @@
 전체 글 조회
 
 </details>
-      
-1. DB 개설
+
+<details><summary>DB 개설 [2022/07/28]</summary>
+
+```sql
+create table MEMBER (
+    `id` BIGINT not null AUTO_INCREMENT,
+    `name` varchar(45),
+    `nickname` varchar(60),
+    `login_id` varchar(10),
+    `password` varchar(255),
+    `email` varchar(255),
+    `phone_number` varchar(20),
+    unique(login_id),
+    primary key(id)
+);
+
+create table ARTICLE (
+    `id` BIGINT not null AUTO_INCREMENT,
+    `member_id` BIGINT,
+    `title` varchar(45),
+    `content` blob,
+    `views` bigint default 0,
+    `date` timestamp default CURRENT_TIMESTAMP(),
+    `categories` varchar(45),
+    check (views >= 0),
+    foreign key(member_id) references MEMBER(id),
+    primary key(id)
+);
+
+create table RECOMMEND(
+    id bigint not null auto_increment,
+    member_id bigint,
+    article_id bigint,
+    foreign key(member_id) references MEMBER(id),
+    foreign key(article_id) references ARTICLE(id),
+    primary key(id)
+);
+
+create table COMMENT(
+    id bigint not null auto_increment,
+    member_id bigint,
+    article_id bigint,
+    content varchar(255),
+    `date` timestamp default current_timestamp(),
+    foreign key(member_id) references MEMBER(id),
+    foreign key(article_id) references ARTICLE(id),
+    primary key(id)
+);
+```
+
+</details>
+
 2. 점검
 3. 프로젝트 시작
 - 아래 저장소를 참고
