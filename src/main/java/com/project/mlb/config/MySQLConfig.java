@@ -3,6 +3,7 @@ package com.project.mlb.config;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
+import org.mybatis.spring.boot.autoconfigure.SqlSessionFactoryBeanCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
@@ -20,7 +21,7 @@ public class MySQLConfig {
         sessionFactory.setDataSource(dataSource);
 
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        sessionFactory.setMapperLocations(resolver.getResource("classpath:mappers/MemberMapper.xml"));
+        sessionFactory.setMapperLocations(resolver.getResources("classpath:mappers/*.xml"));
 
         Resource myBatisConfig = new PathMatchingResourcePatternResolver().getResource("classpath:mybatis-config.xml");
         sessionFactory.setConfigLocation(myBatisConfig);
