@@ -147,7 +147,13 @@ create table COMMENT(
 
 </details>
 
-2. 점검
+<details><summary>점검 [2022/08/01]</summary>
+
+* MyBatis 쿼리 조회 및 화면에 데이터 출력 연동 완료
+  * [[MLB] DB 개설 및 MyBatis 연동 후 전체 점검](https://balanced-soccer-9b0.notion.site/MLB-DB-MyBatis-70eee1db668f4a16b1bf370f37eaed90)
+  * [[MLB] MyBatis MapperLocations오류 문제 찾기](https://balanced-soccer-9b0.notion.site/MLB-MyBatis-MapperLocations-2e56c736f4ca436b8ed377952f1b3bed)
+</details>
+
 3. 프로젝트 시작
 - 아래 저장소를 참고
   - [https://github.com/E-TF/Momo/issues](https://github.com/E-TF/Momo/issues)
