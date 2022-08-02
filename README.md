@@ -158,7 +158,7 @@ create table COMMENT(
   - [https://github.com/E-TF/Momo/issues](https://github.com/E-TF/Momo/issues)
 
 ### 프로젝트 시작
-<details><summary>진행과정</summary>
+<details><summary>진행과정[2022/07/28~]</summary>
 
 * [[MLB] DB 개설 및 MyBatis 연동 후 전체 점검](https://balanced-soccer-9b0.notion.site/MLB-DB-MyBatis-70eee1db668f4a16b1bf370f37eaed90)
 * [[MLB] MyBatis MapperLocations오류 문제 찾기](https://balanced-soccer-9b0.notion.site/MLB-MyBatis-MapperLocations-2e56c736f4ca436b8ed377952f1b3bed)
