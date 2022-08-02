@@ -154,6 +154,16 @@ create table COMMENT(
   * [[MLB] MyBatis MapperLocations오류 문제 찾기](https://balanced-soccer-9b0.notion.site/MLB-MyBatis-MapperLocations-2e56c736f4ca436b8ed377952f1b3bed)
 </details>
 
-3. 프로젝트 시작
 - 아래 저장소를 참고
   - [https://github.com/E-TF/Momo/issues](https://github.com/E-TF/Momo/issues)
+
+### 프로젝트 시작
+<details><summary>진행과정</summary>
+
+* [[MLB] DB 개설 및 MyBatis 연동 후 전체 점검](https://balanced-soccer-9b0.notion.site/MLB-DB-MyBatis-70eee1db668f4a16b1bf370f37eaed90)
+* [[MLB] MyBatis MapperLocations오류 문제 찾기](https://balanced-soccer-9b0.notion.site/MLB-MyBatis-MapperLocations-2e56c736f4ca436b8ed377952f1b3bed)
+* [[MLB] 화면 만들기(1)](https://balanced-soccer-9b0.notion.site/MLB-1-4870eac89b724616a00633292242550b)
+* [[MLB] 화면 만들기(2)](https://balanced-soccer-9b0.notion.site/MLB-2-58da1350aaa648be8fe3ba2678e56e48)
+
+</details>
+
