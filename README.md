@@ -164,6 +164,7 @@ create table COMMENT(
 * [[MLB] MyBatis MapperLocations오류 문제 찾기](https://balanced-soccer-9b0.notion.site/MLB-MyBatis-MapperLocations-2e56c736f4ca436b8ed377952f1b3bed)
 * [[MLB] 화면 만들기(1)](https://balanced-soccer-9b0.notion.site/MLB-1-4870eac89b724616a00633292242550b)
 * [[MLB] 화면 만들기(2)](https://balanced-soccer-9b0.notion.site/MLB-2-58da1350aaa648be8fe3ba2678e56e48)
+* [[MLB] 화면 만들기(3)](https://balanced-soccer-9b0.notion.site/MLB-3-673a4233d93f4bfe9decfc4da5197870)
 
 </details>
 
