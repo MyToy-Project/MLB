@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <title>전체 게시물</title>
+</head>
+
+<body>
+  <!-- 네비게이션 바 영역 -->
+  <div class="container">
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#">HiiWee's MLB</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">내 정보</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">전체 게시물</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#"> 내 게시물</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- 네비게이션 영역 종료 -->
+
+  <!-- 본문 영역 -->
+  <div class="container" style="margin-top: 2em; margin-bottom: 2em; height: 750px;">
+    <table class="table table-hover table-striped shadow p-3 mb-5 bg-body rounded">
+      <div>
+        <div class="form-group pull-right shadow p-3 mb-5 bg-body rounded">
+          <form class="form-inline d-flex justify-content-end " method="GET">
+            <!-- 카테고리 선택 -->
+            <div class="dropdown" style="float: left; margin-right: 10px;">
+              <select class="btn btn-secondary form-select form-select-sm mb-3" aria-label=".form-select-lg example"
+                style="width: auto; text-align: left;">
+                <option selected>카테고리</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <!-- 카테고리 끝 -->
+            <div class="row">
+              <input class="form-control input-lg mb-2 col-4" style="width:300px;" type="text" id="searchText"
+                placeholder="내용을 입력하세요." name="searchText">
+              <button type="submit" class="btn btn-primary mb-2 ms-2 col-1">검색 </button>
+              <button type="button" class="btn btn-warning mb-2 ms-2 col-1 " onclick="location.href='#'">글쓰기</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>제목</th>
+          <th>작성자</th>
+          <th>날짜</th>
+          <th>카테고리</th>
+          <th>조회수</th>
+        </tr>
+      </thead>
+      <!-- 본문: 게시물 영역 -->
+      <tbody>
+        <tr>
+          <td><a href="#">01</a></td>
+          <td><a href="#">제목(추천수)</a></td>
+          <td>작성자</td>
+          <td>날짜</td>
+          <td>카테고리</td>
+          <td>조회수</td>
+        </tr>
+        <tr>
+          <td><a href="#">02</a></td>
+          <td><a href="#">제목(추천수)</a></td>
+          <td>작성자</td>
+          <td>날짜</td>
+          <td>카테고리</td>
+          <td>조회수</td>
+        </tr>
+        <tr>
+          <td><a href="#">03</a></td>
+          <td><a href="#">제목(추천수)</a></td>
+          <td>작성자</td>
+          <td>날짜</td>
+          <td>카테고리</td>
+          <td>조회수</td>
+        </tr>
+      </tbody>
+      <!-- 본문: 게시물 영역 종료-->
+    </table>
+    <hr />
+    <ul class="pagination shadow p-3 mb-5 bg-body rounded justify-content-center"
+      style="width: 300px; margin-left: auto; margin-right: auto;">
+      <li class="page-item"><a class="page-link" href="#">이전</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">다음</a></li>
+    </ul>
+  </div>
+  <!-- 본문 영역 종료 -->
+
+  <!-- Footer 영역 -->
+  <div class="container">
+    <footer class="py-4 bg-dark">
+      <p class="m-0 text-center text-white">Copyright &copy; HiiWee
+        2022</p>
+      <!-- /.container -->
+    </footer>
+  </div>
+  <!-- Footer 영역 종료 -->
+  <script src="../js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

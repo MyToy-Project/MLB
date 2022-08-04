@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <title>상세 게시물 수정 폼</title>
+</head>
+
+<body>
+  <!-- 네비게이션 바 영역 -->
+  <div class="container">
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="#">HiiWee's MLB</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">내 정보</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#">전체 게시물</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-secondary" href="#"> 내 게시물</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- 네비게이션 영역 종료 -->
+
+  <!-- 본문 영역 -->
+  <div class="container mt-5" style="margin-top: 2em; margin-bottom: 2em; height: 750px;">
+    <div class="row">
+      <div class="col-lg-8">
+        <!-- Post content-->
+        <article>
+          <form action="">
+            <!-- Post header-->
+            <header class="mb-4">
+              <!-- Post title-->
+              <h1 class="fw-bolder mb-1">Title</h1>
+              <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="1">
+                  Welcome to Blog Post!
+              </textarea>
+              <!-- Post meta content-->
+              <div class="text-muted fst-italic mb-2">
+                <span style="color: rgb(110, 110, 110); font-weight: bold;">작성자</span>
+                <span>Posted on January 1, 2022 by Start Bootstrap</span>
+                <span class="float-end fw-bolder">hits</span>
+              </div>
+              <!-- Post categories-->
+              <select class="form-select form-select-sm mb-3" aria-label=".form-select-lg example"
+                style="width: 100px;">
+                <option selected>카테고리</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </header>
+            <!-- Post content-->
+            <section class="mb-5">
+              <label for="content" class="form-label">본문</label>
+              <textarea class="form-control" id="content" rows="20">
+              Science is an enterprise that should be cherished as an activity of the free human mind. Because it transforms who we are, how we live, and it gives us an understanding of our place in the universe.
+            </textarea>
+            </section>
+            <button class="btn btn-primary btn-lm float mb-2 ms-3" type="button"
+              onclick="location.href='#'">수정하기</button>
+          </form>
+        </article>
+      </div>
+      
+      <!-- Side widgets-->
+      <div class="col-lg-4">
+        <!-- Search widget-->
+        <div class="card mb-4">
+          <div class="card-header">전체 게시물 검색</div>
+          <div class="card-body">
+            <form action="">
+              <div class="input-group">
+                <input class="form-control" type="text" placeholder="Enter search term..."
+                  aria-label="Enter search term..." aria-describedby="button-search" />
+                <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer 영역 -->
+    <footer class="container">
+      <footer class="py-4 bg-dark">
+        <p class="m-0 text-center text-white">Copyright &copy; HiiWee
+          2022</p>
+      </footer>
+    </footer>
+    <!-- Footer 영역 종료 -->
+  </div>
+  <!-- 본문 영역 종료 -->
+
+  <script src="../js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
