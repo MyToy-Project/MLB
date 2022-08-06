@@ -11,7 +11,7 @@
     
   - Spring Boot Starter
       - Project : Gradle Project
-      - Spring Boot Version : 2.7.2
+      - Spring Boot Version : 2.6.8
       - Group : com.project
       - Artifact: mlb
       - Packaging : Jar
