@@ -1,4 +1,4 @@
-package com.project.mlb.entity;
+package com.project.mlb.vo;
 
 import lombok.Getter;
 

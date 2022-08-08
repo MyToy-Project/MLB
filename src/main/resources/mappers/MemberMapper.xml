@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.project.mlb.dao.MemberDAO">
+<mapper namespace="com.project.mlb.mapper.MemberMapper">
 
-    <select id="getMemberData" resultType="com.project.mlb.dto.MemberDTO">
-        select
-               login_id,
-               password,
-               name,
-               nickname,
-               email,
-               phone_number
-        from member
+    <select id="findByUserId" resultType="com.project.mlb.dto.login.MemberInfoResponseDTO">
+        select * from MEMBER where id = #{userId}
     </select>
 </mapper>
