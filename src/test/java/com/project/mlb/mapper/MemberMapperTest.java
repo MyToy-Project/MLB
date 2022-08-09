@@ -1,6 +1,6 @@
 package com.project.mlb.mapper;
 
-import com.project.mlb.dto.login.MemberInfoResponseDTO;
+import com.project.mlb.dto.member.MemberInfoDTO;
 import org.junit.jupiter.api.Test;
 import org.mybatis.spring.boot.test.autoconfigure.AutoConfigureMybatis;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +23,18 @@ class MemberMapperTest {
     @Test
     void findByUserId() {
         // given
-        MemberInfoResponseDTO failMemberInfoDTO = new MemberInfoResponseDTO("fail", "fail", "fail", "fail", "fail", "fail");
+        MemberInfoDTO failMemberInfoDTO = MemberInfoDTO.builder()
+                .loginId("fail")
+                .password("fail")
+                .name("fail")
+                .nickname("fail")
+                .email("fail")
+                .phoneNumber("fail")
+                .build();
 
         // when
-        Optional<MemberInfoResponseDTO> memberInfoResponseDTO = memberMapper.findByUserId(ADMIN_ID);
-        MemberInfoResponseDTO responseDTO = memberInfoResponseDTO.orElse(failMemberInfoDTO);
+        Optional<MemberInfoDTO> memberInfoResponseDTO = memberMapper.findByMemberId(ADMIN_ID);
+        MemberInfoDTO responseDTO = memberInfoResponseDTO.orElse(failMemberInfoDTO);
         System.out.println(responseDTO);
 
         // then
