@@ -1,11 +1,12 @@
-package com.project.mlb.dto.login;
+package com.project.mlb.dto.member;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
-public class MemberInfoResponseDTO {
+@Builder
+public class MemberInfoDTO {
     private String loginId;
     private String password;
     private String name;
