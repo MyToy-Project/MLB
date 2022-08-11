@@ -2,126 +2,130 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <title>댓글 수정</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>댓글 수정</title>
 </head>
 
 <body>
-  <!-- 네비게이션 바 영역 -->
-  <div class="container">
+<!-- 네비게이션 바 영역 -->
+<div class="container">
     <nav class="navbar navbar-expand-lg bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand text-light" href="#">HiiWee's MLB</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="#">내 정보</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="#">전체 게시물</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-secondary" href="#"> 내 게시물</a>
-            </li>
-          </ul>
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#">HiiWee's MLB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="#">내 정보</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="#">전체 게시물</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary" href="#"> 내 게시물</a>
+                    </li>
+                </ul>
 
-        </div>
-      </div>
-    </nav>
-  </div>
-  <!-- 네비게이션 영역 종료 -->
-
-  <!-- 본문 영역 -->
-  <div class="container mt-5" style="margin-top: 2em; margin-bottom: 2em; height: 750px;">
-    <div class="row">
-      <div class="col-lg-8">
-        <!-- Post content-->
-        <article>
-          <!-- Post header-->
-          <header class="mb-4">
-            <!-- Post title-->
-            <h1 class="fw-bolder mb-1">Welcome to Blog Post!
-              <button class="btn btn-secondary btn-sm float-end ms-2" type="button"
-                onclick="location.href='#'">삭제</button>
-              <button class="btn btn-secondary btn-sm float-end" type="button" onclick="location.href='#'">수정</button>
-            </h1>
-            <!-- Post meta content-->
-            <div class="text-muted fst-italic mb-2">
-              <span style="color: rgb(110, 110, 110); font-weight: bold;">작성자</span>
-              <span>Posted on January 1, 2022 by Start Bootstrap</span>
-              <span class="float-end fw-bolder">hits</span>
             </div>
-            <!-- Post categories-->
-            <span class="badge bg-secondary text-decoration-none link-light">카테고리</span>
-          </header>
-          <!-- Post content-->
-          <section class="mb-5">
-            <p class="fs-5 mb-4">Science is an enterprise that should be cherished as an activity of the free human
-              mind. Because it transforms who we are, how we live, and it gives us an understanding of our place in the
-              universe.</p>
-          </section>
-        </article>
-        <!-- Comments section-->
-        <section class="mb-5">
-          <div class="card bg-light">
-            <div class="card-body">
-              <!-- Edit Comment form-->
+        </div>
+    </nav>
+</div>
+<!-- 네비게이션 영역 종료 -->
 
-              <!-- 댓글 수정-->
-              <div class="d-flex">
-                <div class="ms-3">
-                  <div class="mb-3">
-                    <span class="fw-bold">작성자</span>
-                    <span class="text-muted">작성일</span>
-                    <button class="btn btn-secondary btn-sm">수정완료</button>
-                  </div>
-                  <section class="mb-">
+<!-- 본문 영역 -->
+<main class="container mt-5" style="margin-top: 2em; margin-bottom: 2em; height: 750px;">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Post content-->
+            <article>
+                <!-- Post header-->
+                <header class="mb-4">
+                    <!-- Post title-->
+                    <h1 class="fw-bolder mb-1">Welcome to Blog Post!
+                        <button class="btn btn-secondary btn-sm float-end ms-2" type="button"
+                                onclick="location.href='#'">삭제
+                        </button>
+                        <button class="btn btn-secondary btn-sm float-end" type="button" onclick="location.href='#'">
+                            수정
+                        </button>
+                    </h1>
+                    <!-- Post meta content-->
+                    <div class="text-muted fst-italic mb-2">
+                        <span style="color: rgb(110, 110, 110); font-weight: bold;">작성자</span>
+                        <span>Posted on January 1, 2022 by Start Bootstrap</span>
+                        <span class="float-end fw-bolder">hits</span>
+                    </div>
+                    <!-- Post categories-->
+                    <span class="badge bg-secondary text-decoration-none link-light">카테고리</span>
+                </header>
+                <!-- Post content-->
+                <section class="mb-5">
+                    <p class="fs-5 mb-4">Science is an enterprise that should be cherished as an activity of the free
+                        human
+                        mind. Because it transforms who we are, how we live, and it gives us an understanding of our
+                        place in the
+                        universe.</p>
+                </section>
+            </article>
+            <!-- Comments section-->
+            <section class="mb-5">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <!-- Edit Comment form-->
+
+                        <!-- 댓글 수정-->
+                        <div class="d-flex">
+                            <div class="ms-3">
+                                <div class="mb-3">
+                                    <span class="fw-bold">작성자</span>
+                                    <span class="text-muted">작성일</span>
+                                    <button class="btn btn-secondary btn-sm">수정완료</button>
+                                </div>
+                                <section class="mb-">
                     <textarea class="form-control" id="comment" rows="3" cols="100">
                       댓글입니다.
                     </textarea>
-                  </section>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- Side widgets-->
-      <div class="col-lg-4">
-        <!-- Search widget-->
-        <div class="card mb-4">
-          <div class="card-header">전체 게시물 검색</div>
-          <div class="card-body">
-            <form action="">
-              <div class="input-group">
-                <input class="form-control" type="text" placeholder="Enter search term..."
-                       aria-label="Enter search term..." aria-describedby="button-search" />
-                <button class="btn btn-primary" id="button-search" type="button">Go!</button>
-              </div>
-            </form>
-          </div>
+            </section>
         </div>
-      </div>
+        <!-- Side widgets-->
+        <div class="col-lg-4">
+            <!-- Search widget-->
+            <div class="card mb-4">
+                <div class="card-header">전체 게시물 검색</div>
+                <div class="card-body">
+                    <form action="">
+                        <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Enter search term..."
+                                   aria-label="Enter search term..." aria-describedby="button-search"/>
+                            <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-
     <!-- Footer 영역 -->
     <footer class="container">
-      <footer class="py-4 bg-dark">
-        <p class="m-0 text-center text-white">Copyright &copy; HiiWee
-          2022</p>
-      </footer>
+        <footer class="py-4 bg-dark">
+            <p class="m-0 text-center text-white">Copyright &copy; HiiWee
+                2022</p>
+        </footer>
     </footer>
     <!-- Footer 영역 종료 -->
-  </div>
-  <!-- 본문 영역 종료 -->
+</main>
+<!-- 본문 영역 종료 -->
 
-  <script src="../js/bootstrap.bundle.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
