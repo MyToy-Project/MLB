@@ -5,4 +5,9 @@
     <select id="findByMemberId" resultType="com.project.mlb.dto.member.MemberInfoDTO">
         select * from MEMBER where id = #{memberId}
     </select>
+
+    <insert id="signUp" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO MEMBER(login_id, password, name, nickname, email, phone_number)
+        VALUES (#{loginId}, #{password}, #{name}, #{nickname}, #{email}, #{phoneNumber})
+    </insert>
 </mapper>

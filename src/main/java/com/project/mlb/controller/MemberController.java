@@ -1,8 +1,11 @@
 package com.project.mlb.controller;
 
 import com.project.mlb.dto.member.MemberInfoDTO;
-import com.project.mlb.dto.member.sign.MemberSignInDTO;
+import com.project.mlb.dto.member.sign.SignInDTO;
+import com.project.mlb.dto.member.sign.SignUpDTO;
 import com.project.mlb.service.MemberService;
+import com.project.mlb.validator.MemberValidator;
+import com.project.mlb.vo.Member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 public class MemberController {
 
     private final MemberService memberService;
+    private final MemberValidator memberValidator;
 
 
     /**
@@ -22,7 +26,7 @@ public class MemberController {
      */
     @GetMapping("/sign-in")
     public String signInForm(Model model) {
-        MemberSignInDTO memberSignIn = MemberSignInDTO.
+        SignInDTO memberSignIn = SignInDTO.
                 builder().
                 loginId("id").
                 password("password").
@@ -33,23 +37,27 @@ public class MemberController {
 
 
     /**
-     * 날짜: 2022/08/14
+     * 날짜: 2022/08/18
      * 회원가입 폼
      */
     @GetMapping("/sign-up")
-    public String signUpForm() {
-
+    public String signUpForm(Model model) {
+        SignUpDTO signUpDTO = SignUpDTO.builder().build();
+        model.addAttribute("signUpDTO", signUpDTO);
         return "mlb/sign/form/signUpForm";
     }
 
     /**
-     * 날짜: 2022/08/14
+     * 날짜: 2022/08/18
      * 회원가입 등록
      */
-//    @PostMapping("/sign-up")
-//    public String signUp(@ModelAttribute) {
-//
-//    }
+    @PostMapping("/sign-up")
+    public String signUp(@ModelAttribute SignUpDTO signUpDTO) {
+        Member member = memberValidator.checkPassword(signUpDTO);
+        memberService.signUp(member);
+
+        return "redirect:/";
+    }
 
     /**
      * 날짜: 2022/08/12
