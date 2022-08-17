@@ -168,5 +168,6 @@ create table COMMENT(
 * [[Git] Git Flow 익히기](https://balanced-soccer-9b0.notion.site/Git-Git-Flow-2377ab07dee74909a70a9eb23a0d6389) : 프로젝트 시작전 효율적인 프로젝트 관리를 위해
 * [[MLB] 프로젝트 설정 재설정 및 멤버 조회 만들기](https://balanced-soccer-9b0.notion.site/MLB-214de545eafd4901b86e142f52f2345f)
 * [[MLB] 멤버 조회 서비스 및 테스트 코드](https://balanced-soccer-9b0.notion.site/MLB-98e1bf16c4fb444ca0144804704c7f88)
+* [[MLB] 멤버 조회 폼 연결](https://balanced-soccer-9b0.notion.site/MLB-5d4ade32991a48968c37563aec6cfbaa)
 </details>
 
