@@ -169,5 +169,6 @@ create table COMMENT(
 * [[MLB] 프로젝트 설정 재설정 및 멤버 조회 만들기](https://balanced-soccer-9b0.notion.site/MLB-214de545eafd4901b86e142f52f2345f)
 * [[MLB] 멤버 조회 서비스 및 테스트 코드](https://balanced-soccer-9b0.notion.site/MLB-98e1bf16c4fb444ca0144804704c7f88)
 * [[MLB] 멤버 조회 폼 연결](https://balanced-soccer-9b0.notion.site/MLB-5d4ade32991a48968c37563aec6cfbaa)
+* [[MLB] 멤버 회원가입 단순 구현](https://balanced-soccer-9b0.notion.site/MLB-339b9006086d45abbf28d7e9a2cb022b)
 </details>
 
