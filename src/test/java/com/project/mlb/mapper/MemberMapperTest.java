@@ -1,6 +1,5 @@
 package com.project.mlb.mapper;
 
-import com.project.mlb.dto.member.MemberInfoDTO;
 import com.project.mlb.vo.Member;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -27,7 +26,7 @@ class MemberMapperTest {
     @Test
     void findByUserId() {
         // given
-        MemberInfoDTO failMemberInfoDTO = MemberInfoDTO.builder()
+        Member failMemberInfoDTO = Member.builder()
                 .loginId("fail")
                 .password("fail")
                 .name("fail")
@@ -37,8 +36,8 @@ class MemberMapperTest {
                 .build();
 
         // when
-        Optional<MemberInfoDTO> memberInfoResponseDTO = memberMapper.findByMemberId(ADMIN_ID);
-        MemberInfoDTO responseDTO = memberInfoResponseDTO.orElse(failMemberInfoDTO);
+        Optional<Member> optionalMember = memberMapper.findByMemberId(ADMIN_ID);
+        Member responseDTO = optionalMember.orElse(failMemberInfoDTO);
         System.out.println(responseDTO);
 
         // then
@@ -66,12 +65,11 @@ class MemberMapperTest {
 
         // when
         memberMapper.signUp(member);
-        Optional<MemberInfoDTO> findMember = memberMapper.findByMemberId(member.getId());
-        MemberInfoDTO memberInfoDTO = findMember.get();
+        Optional<Member> optionalMember = memberMapper.findByMemberId(member.getId());
+        Member memberFind  = optionalMember.get();
 
         // then
-        assertThat(memberInfoDTO.getEmail()).isEqualTo(member.getEmail());
+        assertThat(memberFind.getEmail()).isEqualTo(member.getEmail());
     }
-
 
 }

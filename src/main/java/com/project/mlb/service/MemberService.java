@@ -1,7 +1,5 @@
 package com.project.mlb.service;
 
-import com.project.mlb.dto.member.MemberInfoDTO;
-import com.project.mlb.dto.member.sign.SignUpDTO;
 import com.project.mlb.exception.UserNotFountException;
 import com.project.mlb.mapper.MemberMapper;
 import com.project.mlb.validator.MemberValidator;
@@ -22,8 +20,8 @@ public class MemberService {
     private final MemberValidator memberValidator;
 
     @Transactional(readOnly = true)
-    public MemberInfoDTO getMemberInfo(Long userId) {
-        Optional<MemberInfoDTO> optionalMember = memberMapper.findByMemberId(userId);
+    public Member getMemberInfo(Long userId) {
+        Optional<Member> optionalMember = memberMapper.findByMemberId(userId);
         if (optionalMember.isEmpty()) {
             throw new UserNotFountException("존재하지 않는 유저입니다.");
         }

@@ -1,7 +1,5 @@
 package com.project.mlb.service;
 
-import com.project.mlb.dto.member.MemberInfoDTO;
-import com.project.mlb.dto.member.sign.SignUpDTO;
 import com.project.mlb.vo.Member;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -29,10 +27,10 @@ public class memberServicetest {
     @DisplayName("멤버 정상 조회 테스트")
     void getMemberInfoSuccess() {
         // given, when
-        MemberInfoDTO memberInfo = memberService.getMemberInfo(ADMIN_ID);
+        Member member = memberService.getMemberInfo(ADMIN_ID);
 
         // then
-        assertThat(memberInfo.getLoginId()).isEqualTo("admin");
+        assertThat(member.getLoginId()).isEqualTo("admin");
     }
 
     @Test
@@ -70,10 +68,10 @@ public class memberServicetest {
 
         // when
         Long memberId = memberService.signUp(member);
-        MemberInfoDTO memberInfo = memberService.getMemberInfo(memberId);
+        Member memberFind = memberService.getMemberInfo(memberId);
 
         // then
-        assertThat(member.getLoginId()).isEqualTo(memberInfo.getLoginId());
+        assertThat(member.getLoginId()).isEqualTo(memberFind.getLoginId());
 
     }
 }

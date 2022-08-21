@@ -1,6 +1,5 @@
 package com.project.mlb.controller;
 
-import com.project.mlb.dto.member.MemberInfoDTO;
 import com.project.mlb.dto.member.sign.SignInDTO;
 import com.project.mlb.dto.member.sign.SignUpDTO;
 import com.project.mlb.service.MemberService;
@@ -26,11 +25,7 @@ public class MemberController {
      */
     @GetMapping("/sign-in")
     public String signInForm(Model model) {
-        SignInDTO memberSignIn = SignInDTO.
-                builder().
-                loginId("id").
-                password("password").
-                build();
+        SignInDTO memberSignIn = SignInDTO.builder().build();
         model.addAttribute("signIn", memberSignIn);
         return "mlb/sign/form/signInForm";
     }
@@ -66,8 +61,8 @@ public class MemberController {
     @GetMapping("/{memberId}/info")
     public String memberInfo(@PathVariable long memberId, Model model) {
 
-        MemberInfoDTO memberInfoDTO = memberService.getMemberInfo(memberId);
-        model.addAttribute("memberInfoDTO", memberInfoDTO);
+        Member member = memberService.getMemberInfo(memberId);
+        model.addAttribute("memberInfoDTO", member);
         return "mlb/members/memberInfo";
     }
 }
