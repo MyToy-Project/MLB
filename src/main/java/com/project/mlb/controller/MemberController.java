@@ -6,10 +6,14 @@ import com.project.mlb.service.MemberService;
 import com.project.mlb.validator.MemberValidator;
 import com.project.mlb.vo.Member;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.Session;
+
+@Slf4j
 @Controller
 @RequestMapping("/members")
 @RequiredArgsConstructor
@@ -30,6 +34,22 @@ public class MemberController {
         return "mlb/sign/form/signInForm";
     }
 
+    /**
+     * 날짜: 2022/08/22
+     * 로그인 폼
+     */
+//    @PostMapping("/sign-in")
+//    public String signIn(@ModelAttribute SignInDTO signInDTO, Session session) {
+//        try {
+//            memberValidator.checkStringNull("로그인 아이디", signInDTO.getLoginId());
+//            memberValidator.checkStringNull("로그인 패스워드", signInDTO.getPassword());
+//        } catch (RuntimeException e) {
+//            log.info(e.getMessage());
+//            return "mlb/sign/form/signInForm";
+//        }
+//        Member member = memberService.signIn(signInDTO.getLoginId());
+//
+//    }
 
     /**
      * 날짜: 2022/08/18

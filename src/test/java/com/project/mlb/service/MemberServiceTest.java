@@ -9,15 +9,13 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.awt.*;
-
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @AutoConfigureMybatis
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-public class memberServicetest {
+public class MemberServiceTest {
 
     @Autowired
     private MemberService memberService;
@@ -73,5 +71,35 @@ public class memberServicetest {
         // then
         assertThat(member.getLoginId()).isEqualTo(memberFind.getLoginId());
 
+    }
+
+    /**
+     * 날짜: 2022/08/22
+     * 테스트: 로그인 성공 테스트
+     */
+    @Test
+    @Transactional
+    @DisplayName("멤버 로그인 테스트")
+    void signIn() {
+        // given
+        Member member = Member.builder()
+                .name("TEST")
+                .loginId("TEST")
+                .nickname("TEST")
+                .password("1234")
+                .email("TEST@naver.com")
+                .phoneNumber("010-0000-0000")
+                .build();
+
+        // when
+        Long memberId = memberService.signUp(member);
+        Member memberInfoFind = memberService.getMemberInfo(memberId);
+        Member memberFind = memberService.signIn(memberInfoFind.getLoginId());
+
+        // then
+        assertThat(memberFind).isNotNull();
+        assertThat(memberFind.getId()).isEqualTo(member.getId());
+        assertThat(memberFind.getLoginId()).isEqualTo(member.getLoginId());
+        assertThat(memberFind.getPassword()).isEqualTo(member.getPassword());
     }
 }

@@ -8,15 +8,15 @@
 
 <body class="text-center">
 <main class="form-signin w-100 m-auto mt-5">
-    <form th:action method="post">
+    <form th:action method="post" th:object="${signIn}">
         <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
         <div class="form-floating">
-            <input type="text" class="form-control" id="logInId" placeholder="name@example.com">
+            <input type="text" class="form-control" id="logInId" th:field="*{loginId}" placeholder="name@example.com">
             <label for="logInId">User ID</label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control" id="password" th:field="*{password}" placeholder="Password">
             <label for="password">Password</label>
         </div>
 

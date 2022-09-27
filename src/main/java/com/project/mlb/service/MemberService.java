@@ -1,8 +1,7 @@
 package com.project.mlb.service;
 
-import com.project.mlb.exception.UserNotFountException;
+import com.project.mlb.exception.UserNotFoundException;
 import com.project.mlb.mapper.MemberMapper;
-import com.project.mlb.validator.MemberValidator;
 import com.project.mlb.vo.Member;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,15 +16,27 @@ import java.util.Optional;
 public class MemberService {
 
     private final MemberMapper memberMapper;
-    private final MemberValidator memberValidator;
 
-    @Transactional(readOnly = true)
-    public Member getMemberInfo(Long userId) {
-        Optional<Member> optionalMember = memberMapper.findByMemberId(userId);
-        if (optionalMember.isEmpty()) {
-            throw new UserNotFountException("존재하지 않는 유저입니다.");
+    @Transactional
+    public Member getMemberInfo(Long memberId) {
+        Optional<Member> memberOptional = memberMapper.findByMemberId(memberId);
+        if (memberOptional.isEmpty()) {
+            throw new UserNotFoundException("존재하지 않는 유저입니다.");
         }
-        return optionalMember.get();
+        return memberOptional.get();
+    }
+
+    /**
+     * 날짜: 2022/08/22
+     * 서비스: 로그인
+     */
+    @Transactional
+    public Member signIn(String loginId) {
+        Optional<Member> memberOptional = memberMapper.findByLoginId(loginId);
+        if (memberOptional.isEmpty()) {
+            throw new UserNotFoundException("존재하지 않는 유저입니다.");
+        }
+        return memberOptional.get();
     }
 
     /**

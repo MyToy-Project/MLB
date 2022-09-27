@@ -26,7 +26,7 @@ class MemberMapperTest {
     @Test
     void findByUserId() {
         // given
-        Member failMemberInfoDTO = Member.builder()
+        Member failMember = Member.builder()
                 .loginId("fail")
                 .password("fail")
                 .name("fail")
@@ -37,12 +37,11 @@ class MemberMapperTest {
 
         // when
         Optional<Member> optionalMember = memberMapper.findByMemberId(ADMIN_ID);
-        Member responseDTO = optionalMember.orElse(failMemberInfoDTO);
-        System.out.println(responseDTO);
+        Member memberFind = optionalMember.orElseGet(() -> failMember);
 
         // then
-        assertThat(responseDTO.getLoginId()).isNotEqualTo("fail");
-        assertThat(responseDTO.getLoginId()).isEqualTo("admin");
+        assertThat(memberFind.getLoginId()).isNotEqualTo("fail");
+        assertThat(memberFind.getLoginId()).isEqualTo("admin");
     }
 
 
@@ -72,4 +71,33 @@ class MemberMapperTest {
         assertThat(memberFind.getEmail()).isEqualTo(member.getEmail());
     }
 
+    /**
+     * 날짜: 2022/08/22
+     * 테스트: 로그인 매퍼 테스트
+     */
+    @Test
+    @DisplayName("멤버 로그인 Mapper 테스트")
+    void signIn() {
+        // given
+        Member member = Member.builder()
+                .name("TEST")
+                .loginId("TEST")
+                .nickname("TEST")
+                .password("1234")
+                .email("TEST@naver.com")
+                .phoneNumber("010-0000-0000")
+                .build();
+
+        // when
+        memberMapper.signUp(member);
+        Optional<Member> memberOptional = memberMapper.findByLoginId(member.getLoginId());
+        Member memberFind = memberOptional.get();
+
+        // then
+        assertThat(memberFind).isNotNull();
+        assertThat(memberFind.getId()).isEqualTo(member.getId());
+        assertThat(memberFind.getLoginId()).isEqualTo(member.getLoginId());
+        assertThat(memberFind.getPassword()).isEqualTo(member.getPassword());
+
+    }
 }

@@ -1,11 +1,16 @@
 package com.project.mlb.validator;
 
 import com.project.mlb.dto.member.sign.SignUpDTO;
+import com.project.mlb.mapper.MemberMapper;
 import com.project.mlb.vo.Member;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+@RequiredArgsConstructor
 @Component
 public class MemberValidator {
+
+    private final MemberMapper memberMapper;
 
     /**
      * 날짜: 2022/08/18
@@ -25,5 +30,11 @@ public class MemberValidator {
                 .email(signUpDTO.getEmail())
                 .phoneNumber(signUpDTO.getPhoneNumber())
                 .build();
+    }
+
+    public void checkStringNull(String column, String value) {
+        if (value == null) {
+            throw new IllegalArgumentException(column + " 을 입력해야합니다.");
+        }
     }
 }
